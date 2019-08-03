@@ -44,7 +44,7 @@ int XmlFunction::SetupDocument()
 //[1]
 MDC XmlFunction::CreateMDCStruct()
 {
-    /*create mdc*/
+    
     struct MDC_STRUCT *_mdc = (struct MDC_STRUCT*) nodeparse_malloc_zero(sizeof(struct MDC_STRUCT));
 
     QDomElement element = xmldocument.documentElement();
@@ -106,7 +106,7 @@ MFH XmlFunction::CreateMFHStruct(const QDomElement& node)
 // node[NEID]
 NEID XmlFunction::CreateNEIDStruct(const QDomElement &node)
 {
-    /*prepare struct NEID*/
+   
     struct NEID_STRUCT *_neid =new NEID_STRUCT;
 
     QDomNode node_neid = node.firstChild();
@@ -124,7 +124,7 @@ NEID XmlFunction::CreateNEIDStruct(const QDomElement &node)
 // node[MI]
 MI XmlFunction::CreateMIStruct(const QDomElement &node)
 {
-    /*prepare struct NEID*/
+   
     struct MI_STRUCT *_mi =new MI_STRUCT;
 
     /*node mt have more 2 need to be list*/
@@ -142,7 +142,7 @@ MI XmlFunction::CreateMIStruct(const QDomElement &node)
         if(current.nodeName() == "mv") mv->append(CreateMVStruct(current));
         node_mi = current.nextSibling();
     }
-    // add mt list to struct
+    // add mt list
     _mi->mt = mtlist;
     _mi->_mv = mv;
 
