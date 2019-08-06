@@ -1,3 +1,3 @@
-# Erricson-dump-parser
-Ericcson dump file parser
-Simple parsing XML or dump file from Ericsson networks.
+# Ericsson-dump-parser
+Ericsson dump file parser
+Utility to parse XML or dump file from Ericsson networks.
